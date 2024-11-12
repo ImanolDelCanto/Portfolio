@@ -48,13 +48,19 @@ export function Contacto(){
                       <h3 className="text-xl font-semibold mb-4">Conéctate conmigo</h3>
                       <div className="flex space-x-4">
                         <Button variant="outline" size="icon">
-                          <Github className="h-4 w-4" />
+                          <a href="https://github.com/Imaagus" target="_blank" >
+                            <Github className="h-4 w-4" />
+                          </a>
                         </Button>
                         <Button variant="outline" size="icon">
-                          <Linkedin className="h-4 w-4" />
+                          <a href="https://www.linkedin.com/in/imanol-del-canto-10135024a/" target="_blank">
+                            <Linkedin className="h-4 w-4" />
+                          </a>
                         </Button>
                         <Button variant="outline" size="icon">
-                          <Mail className="h-4 w-4" />
+                          <a href="mailto:imaaugus04@gmail.com">
+                            <Mail className="h-4 w-4" />
+                          </a>
                         </Button>
                       </div>
                     </div>

@@ -27,14 +27,17 @@ export function SobreMiComponent() {
             <h3 className="text-xl font-semibold mb-2">Educación</h3>
             <div className="mb-4">
               <h4 className="font-semibold">Licenciatura en Sistemas</h4>
-              <p className="text-gray-600 dark:text-gray-300">Universidad XYZ, 2020 - Presente</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Promedio actual: 8.5/10</p>
+              <p className="text-gray-600 dark:text-gray-300">Universidad Nacional de Lanus, 2023 - Presente</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Promedio actual: 8.0/10</p>
+            </div>
+            <div className="mb-4">
+              <h4 className="font-semibold">Ingles (B2)</h4>
+              <p className="text-gray-600 dark:text-gray-300">Instituto Lenguas Vivas, 2015 - 2022 </p>
             </div>
             <h3 className="text-xl font-semibold mb-2">Certificaciones</h3>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300">
-              <li>Desarrollo Web Full Stack - Platzi</li>
-              <li>React Avanzado - Udemy</li>
-              <li>AWS Certified Cloud Practitioner</li>
+              <li>Desarrollo Web - CoderHouse</li>
+              <li>JavaScript - CoderHouse</li>
             </ul>
           </div>
         </div>

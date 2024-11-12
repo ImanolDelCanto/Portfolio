@@ -24,14 +24,16 @@ export function Header(){
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}>
-                Tu Nombre
+                Imanol Del Canto
             </motion.h1>
             <div className="flex items-center space-x-4">
                 <Button variant="outline" size="icon" onClick={toggleTheme}>
                 {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-                </Button>
+                </Button >
                 <Button variant="outline">
-                <Download className="mr-2 h-4 w-4" /> CV
+                <a href="/media/cv.pdf" download="ImanolDelCanto-Cv.pdf" className="flex items-center">
+                    <Download className="mr-2 h-4 w-4" /> CV
+                </a>
                 </Button>
             </div>
             </nav>
@@ -40,10 +42,17 @@ export function Header(){
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}>
-            <h2 className="text-4xl font-bold mb-4">Desarrollador Full Stack</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                Estudiante de Licenciatura en Sistemas | Especializado en React y Tecnologías Web Modernas
-            </p>
+            <div className="flex ms:justify-between">
+                <div>
+                    <img src="/media/Foto-cv.jpg" alt="Foto perfil" className="w-52 h-52 rounded-full  object-cover object-top" />
+                </div>
+                <div className="md:ml-72 content-center ">
+                    <h2 className="text-4xl font-bold mb-4">Desarrollador Junior</h2>
+                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                        Estudiante de Licenciatura en Sistemas | Desarrollador web 
+                    </p>
+                </div>
+            </div>
             </motion.div>
         </div>
     );

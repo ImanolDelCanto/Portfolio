@@ -21,7 +21,7 @@ export function PortafolioMejoradoComponent() {
 
   return (
     (<div
-      className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+      className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-zinc-900 dark:to-gray-800 transition-colors duration-300">
       <header className="container mx-auto px-4 py-8">
         <Header />
       </header>
@@ -56,7 +56,7 @@ export function PortafolioMejoradoComponent() {
           </AnimatePresence>
         </Tabs>
       </main>
-      <footer className="bg-gray-100 dark:bg-gray-900 py-12">
+      <footer className="bg-gray-100 dark:bg-gray-900 py-8">
         <Footer/>
       </footer>
     </div>)

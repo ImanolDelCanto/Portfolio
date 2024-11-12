@@ -10,8 +10,8 @@ export function Proyectos() {
         <div className="grid gap-6 md:grid-cols-2">
             {[
                 {
-                title: "E-commerce Platform",
-                description: "Una plataforma de comercio electrónico completa construida con Next.js y Stripe",
+                title: "Landing Page",
+                description: "Sitio web el cual muestra que son los vuelos bautismos y permite reservar para realizarlos",
                 image: "/placeholder.svg?height=200&width=400",
                 tags: ["Next.js", "Stripe", "Tailwind CSS", "PostgreSQL"]
                 },

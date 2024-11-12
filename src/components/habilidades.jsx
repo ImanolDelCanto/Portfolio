@@ -15,27 +15,21 @@ export function Habilidades() {
                 <div className="grid md:grid-cols-2 gap-6">
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Tecnologías Frontend</h3>
-                        {['React', 'Next.js', 'TypeScript', 'Tailwind CSS'].map((skill) => (
-                          <div key={skill} className="mb-4">
-                            <div className="flex justify-between mb-1">
-                              <span className="text-base font-medium text-gray-700 dark:text-gray-300">{skill}</span>
-                              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">85%</span>
-                            </div>
-                            <Progress value={85} className="w-full" />
-                          </div>
-                        ))}
+                        <div className="flex flex-wrap gap-2">
+                        <Badge>React</Badge>
+                        <Badge>Next.js</Badge>
+                        <Badge>TypeScript</Badge>
+                        <Badge>Tailwind CSS</Badge>
+                      </div>
                     </div>
                     <div>
                     <h3 className="text-xl font-semibold mb-4">Tecnologías Backend</h3>
-                        {['Node.js', 'Express', 'PostgreSQL', 'MongoDB'].map((skill) => (
-                          <div key={skill} className="mb-4">
-                            <div className="flex justify-between mb-1">
-                              <span className="text-base font-medium text-gray-700 dark:text-gray-300">{skill}</span>
-                              <span className="text-sm font-medium text-gray-600 dark:text-gray-400">75%</span>
-                            </div>
-                            <Progress value={75} className="w-full" />
-                          </div>
-                        ))}
+                      <div className="flex flex-wrap gap-2">
+                        <Badge>Node.js</Badge>
+                        <Badge>Express</Badge>
+                        <Badge>PostgreSQL</Badge>
+                        <Badge>MongoDB</Badge>
+                      </div>
                     </div>
                 </div>
                 <div className="mt-6">
