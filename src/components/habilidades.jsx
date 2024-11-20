@@ -16,33 +16,40 @@ export function Habilidades() {
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Tecnologías Frontend</h3>
                         <div className="flex flex-wrap gap-2">
-                        <Badge>React</Badge>
-                        <Badge>Next.js</Badge>
-                        <Badge>TypeScript</Badge>
-                        <Badge>Tailwind CSS</Badge>
+                        <Badge className="gap-1"><img src="/react.svg" alt="react icon" className="w-6"/>React</Badge>
+                        <Badge className="gap-1"><img src="/next.js.svg" alt="next icon" className="w-5"/>Next.js</Badge>
+                        <div className="flex gap-1">                      
+                        <Badge className="gap-1"><img src="/javaScript.svg" alt="javascript icon" className="w-6"/>JavaScript</Badge>
+                        </div>
+                        <Badge className="gap-1"><img src="/tailwind.svg" alt="tailwind icon" className="w-6"/>Tailwind CSS</Badge>
                       </div>
                     </div>
                     <div>
                     <h3 className="text-xl font-semibold mb-4">Tecnologías Backend</h3>
                       <div className="flex flex-wrap gap-2">
-                        <Badge>Node.js</Badge>
-                        <Badge>Express</Badge>
-                        <Badge>PostgreSQL</Badge>
-                        <Badge>MongoDB</Badge>
+                        <Badge className="gap-1"><img src="/MySQL.svg" alt="sql icon" className="w-6"/>MySQL</Badge>
+                      </div>
+                    </div>
+                    <div>
+                    <h3 className="text-xl font-semibold mb-4">Tecnologías de desarrollo de Software</h3>
+                      <div className="flex flex-wrap gap-2">
+                        <Badge className="gap-1"><img src="/c.svg" alt="c icon" className="w-5"/>C</Badge>
+                        <Badge className="gap-1"><img src="/kotlin.svg" alt="kotlin icon" className="w-5"/>Kotlin</Badge>
                       </div>
                     </div>
                 </div>
                 <div className="mt-6">
                 <h3 className="text-xl font-semibold mb-4">Otras Habilidades</h3>
                     <div className="flex flex-wrap gap-2">
-                        <Badge>Git</Badge>
-                        <Badge>Docker</Badge>
-                        <Badge>CI/CD</Badge>
-                        <Badge>Agile/Scrum</Badge>
-                        <Badge>UI/UX Design</Badge>
-                        <Badge>RESTful APIs</Badge>
-                        <Badge>GraphQL</Badge>
-                        <Badge>Jest</Badge>
+                        <Badge className="gap-1"><img src="/git.svg" alt="git icon" className="w-5"/>Git</Badge>
+                        <Badge className="gap-1">RESTful APIs</Badge>
+                        <Badge className="gap-1">MySQL Workbench</Badge>
+                        <Badge className="gap-1">ADOO</Badge>
+                        <Badge className="gap-1">UML</Badge>
+                        <Badge className="gap-1">Desarrollo mobile</Badge>
+                        <Badge className="gap-1">Agile/Scrum/Kanban</Badge>
+                        <Badge className="gap-1">Cloud computing</Badge>
+                        <Badge className="gap-1">Trabajo en equipo</Badge>
                     </div>
                 </div>
                 </CardContent>
