@@ -11,7 +11,7 @@ import { Footer } from './footer'
 import { Header } from './header'
 
 export function PortafolioMejoradoComponent() {
-  const [activeTab, setActiveTab] = useState('sobre-mi')
+  const [activeTab, setActiveTab] = useState("sobremi");
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -23,12 +23,12 @@ export function PortafolioMejoradoComponent() {
     (<div
       className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-zinc-900 dark:to-gray-800 transition-colors duration-300">
       <header className="container mx-auto px-4 py-8">
-        <Header />
+        <Header/>
       </header>
       <main className="container mx-auto px-4 mb-16">
-        <Tabs defaultValue="sobre-mi" className="w-full">
+        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value)} className="w-full">
           <TabsList className="grid w-full grid-cols-4 mb-8">
-            <TabsTrigger value="sobre-mi">Sobre Mí</TabsTrigger>
+            <TabsTrigger value="sobremi">Sobre Mí</TabsTrigger>
             <TabsTrigger value="habilidades">Habilidades</TabsTrigger>
             <TabsTrigger value="proyectos">Proyectos</TabsTrigger>
             <TabsTrigger value="contacto">Contacto</TabsTrigger>
@@ -40,24 +40,24 @@ export function PortafolioMejoradoComponent() {
               animate="animate"
               exit="exit"
               variants={fadeIn}>
-              <TabsContent value="sobre-mi">
-                <SobreMiComponent />
+             <TabsContent value="sobremi" >
+              <SobreMiComponent id="sobremi"/>
               </TabsContent>
               <TabsContent value="habilidades">
-                <Habilidades />
+                <Habilidades/>
               </TabsContent>
               <TabsContent value="proyectos">
-                <Proyectos />
+                <Proyectos id="proyectos"/>
               </TabsContent>
-              <TabsContent value="contacto">
-                <Contacto />
+              <TabsContent value="contacto" >
+                <Contacto id="contacto"/>           
               </TabsContent>
             </motion.div>
           </AnimatePresence>
         </Tabs>
       </main>
       <footer className="bg-gray-100 dark:bg-gray-900 py-8">
-        <Footer/>
+        <Footer setActiveTab={setActiveTab} />
       </footer>
     </div>)
   );

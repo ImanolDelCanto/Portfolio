@@ -12,44 +12,34 @@ export function Proyectos() {
                 {
                 title: "Landing Page",
                 description: "Sitio web el cual muestra que son los vuelos bautismos y permite reservar para realizarlos",
-                image: "/placeholder.svg?height=200&width=400",
-                tags: ["Next.js", "Stripe", "Tailwind CSS", "PostgreSQL"]
+                image: "/media/FlightPage.png",
+                tags: ["React","Next.js","Tailwind CSS"],
+                url: "https://vuelosdebautismos.vercel.app/"
                 },
                 {
-                title: "Task Management App",
-                description: "Aplicación de gestión de tareas con autenticación y tiempo real usando Firebase",
-                image: "/placeholder.svg?height=200&width=400",
-                tags: ["React", "Firebase", "Material-UI"]
-                },
-                {
-                title: "Portfolio Website",
-                description: "Sitio web de portafolio personal con animaciones suaves y diseño responsivo",
-                image: "/placeholder.svg?height=200&width=400",
-                tags: ["React", "Framer Motion", "Tailwind CSS"]
-                },
-                {
-                title: "Weather Forecast App",
-                description: "Aplicación de pronóstico del tiempo con geolocalización y visualización de datos",
-                image: "/placeholder.svg?height=200&width=400",
-                tags: ["React Native", "OpenWeatherMap API", "Chart.js"]
+                title: "Aplicacion de noticias",
+                description: "Aplicación la cual se realiza consultas a una api mediante Retrofit y Moshi para tener las ultimas noticias. Posee una base de datos local mediante el SharedPreferences el cual utilizamos para guardar usarios en el registro y que puedan logearse luego. Desarrollada por 4 integrantes.",
+                image: "/media/appview.png",
+                tags: ["Kotlin"],
+                url: "https://github.com/Imaagus/Appnoticias"
                 }
                 ].map((project, index) => (
-                <Card key={index}>
+                <Card key={index} className="flex flex-col h-full">
                     <CardHeader>
                         <CardTitle>{project.title}</CardTitle>
                         <CardDescription>{project.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex flex-col flex-grow justify-between">
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-48 object-cover rounded-md mb-4" />
-                        <div className="flex flex-wrap gap-2 mb-4">
+                          className="w-full h-72 object-cover object-top rounded-md mb-4"/>
+                        <div className="flex flex-wrap gap-2 mb-4 items-center">
                           {project.tags.map((tag, tagIndex) => (
                             <Badge key={tagIndex} variant="secondary">{tag}</Badge>
                           ))}
                         </div>
-                        <Button className="w-full">Ver Proyecto</Button>
+                        <Button className="w-full"><a href={project.url} target="_blank">Ver Proyecto</a></Button>
                     </CardContent>
                 </Card>
             ))}

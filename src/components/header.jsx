@@ -48,8 +48,11 @@ export function Header(){
                 </div>
                 <div className="md:ml-72 content-center ">
                     <h2 className="text-4xl font-bold mb-4">Desarrollador Junior</h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">
                         Estudiante de Licenciatura en Sistemas | Desarrollador web 
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+                    [ 1 a 2 años de experiencia ]
                     </p>
                 </div>
             </div>

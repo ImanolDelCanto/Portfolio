@@ -6,14 +6,14 @@ import { Github, Linkedin, Mail} from "lucide-react"
 
 export function Contacto(){
     return(
-        <Card>
+        <Card >
             <CardHeader>
                 <CardTitle>Contacto</CardTitle>
                 <CardDescription>¡Estoy siempre abierto a nuevas oportunidades y colaboraciones!</CardDescription>
             </CardHeader>
                 <CardContent>
                 <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4 ">
                     <div>
                     <label htmlFor="name"className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nombre</label>
                     <input
@@ -66,5 +66,6 @@ export function Contacto(){
                     </div>
                 </CardContent>
         </Card>
+
     )
 }
