@@ -1,12 +1,86 @@
 'use client'
 
-import { Progress } from "@/components/ui/progress"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image";
 
 
 export function Habilidades() {
+  const habilidades = [
+    {
+    categoria:"Tecnologías Frontend",
+    tecnologias: [ 
+      {
+        src:"/react.svg",
+        alt:"react icon",
+        nombre: "React"
+      },{
+        src:"/next.js.svg",
+        alt: "next icon",
+        nombre: "Next.js"
+      },{
+        src:"/javaScript.svg",
+        alt:"javascript icon",
+        nombre:"JavaScript"
+      },{
+        src:"/tailwind.svg",
+        alt:"tailwind icon",
+        nombre:"Tailwind CSS"
+      }
+    ]
+    },
+    {
+    categoria: "Tecnologías Backend",
+    tecnologias: [
+      {
+        src:"/MySQL.svg",
+        alt:"MySQL icon",
+        nombre:"MySQL"
+      }
+    ]
+    },{
+      categoria: "Tecnologías de desarrollo de Software",
+      tecnologias: [
+        {
+          src:"/c.svg",
+          alt:"C icon",
+          nombre:"C"
+        },{
+          src:"/kotlin.svg" ,
+          alt:"Kotlin icon",
+          nombre:"Kotlin"
+        }
+      ]
+    }];
+  const otrasHabilidades =[
+    {
+      categoria: "Otras Habilidades",
+      otros: [
+        {
+          src:"/git.svg",
+          alt: "git icon",
+          nombre: "git"
+        },{
+          nombre: "RESTful APIs"
+        },{
+          nombre: "MySQL Workbench"
+        },{
+          nombre: "ADOO"
+        },{
+          nombre: "UML"
+        },{
+          nombre: "Desarrollo mobile"
+        },{
+          nombre: "Agile/Scrum/Kanban"
+        },{
+          nombre: "Cloud computing"
+        },{
+          nombre: "Trabajo en equipo"
+        }
+      ]
+    }
+  ];
+  
     return(
         <Card>
             <CardHeader>
@@ -14,44 +88,46 @@ export function Habilidades() {
                   </CardHeader>
                 <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 className="text-xl font-semibold mb-4">Tecnologías Frontend</h3>
-                        <div className="flex flex-wrap gap-2">
-                        <Badge className="gap-1"><Image src="/react.svg" alt="react icon" className="w-6"/>React</Badge>
-                        <Badge className="gap-1"><Image src="/next.js.svg" alt="next icon" className="w-5"/>Next.js</Badge>
-                        <div className="flex gap-1">                      
-                        <Badge className="gap-1"><Image src="/javaScript.svg" alt="javascript icon" className="w-6"/>JavaScript</Badge>
-                        </div>
-                        <Badge className="gap-1"><Image src="/tailwind.svg" alt="tailwind icon" className="w-6"/>Tailwind CSS</Badge>
-                      </div>
-                    </div>
-                    <div>
-                    <h3 className="text-xl font-semibold mb-4">Tecnologías Backend</h3>
+                  {habilidades.map((habilidad, index) => (
+                    <div key={index}>
+                      <h3 className="text-xl font-semibold mb-4">{habilidad.categoria}</h3>
                       <div className="flex flex-wrap gap-2">
-                        <Badge className="gap-1"><Image src="/MySQL.svg" alt="sql icon" className="w-6"/>MySQL</Badge>
+                        {habilidad.tecnologias.map((tecnologia, i) => (
+                          <Badge key={i} className="gap-1 p-1 px-2">
+                            <Image
+                              src={tecnologia.src}
+                              alt={tecnologia.alt}
+                              width={20}
+                              height={20}
+                            />
+                            {tecnologia.nombre}
+                          </Badge>
+                        ))}
                       </div>
                     </div>
-                    <div>
-                    <h3 className="text-xl font-semibold mb-4">Tecnologías de desarrollo de Software</h3>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge className="gap-1"><Image src="/c.svg" alt="c icon" className="w-5"/>C</Badge>
-                        <Badge className="gap-1"><Image src="/kotlin.svg" alt="kotlin icon" className="w-5"/>Kotlin</Badge>
-                      </div>
-                    </div>
+                  ))}
                 </div>
                 <div className="mt-6">
-                <h3 className="text-xl font-semibold mb-4">Otras Habilidades</h3>
-                    <div className="flex flex-wrap gap-2">
-                        <Badge className="gap-1"><Image src="/git.svg" alt="git icon" className="w-5"/>Git</Badge>
-                        <Badge className="gap-1">RESTful APIs</Badge>
-                        <Badge className="gap-1">MySQL Workbench</Badge>
-                        <Badge className="gap-1">ADOO</Badge>
-                        <Badge className="gap-1">UML</Badge>
-                        <Badge className="gap-1">Desarrollo mobile</Badge>
-                        <Badge className="gap-1">Agile/Scrum/Kanban</Badge>
-                        <Badge className="gap-1">Cloud computing</Badge>
-                        <Badge className="gap-1">Trabajo en equipo</Badge>
+                  {otrasHabilidades.map((habilidad, index) => (
+                    <div key={index}>
+                      <h3 className="text-xl font-semibold mb-4">{habilidad.categoria}</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {habilidad.otros.map((otro,i) =>(
+                          <Badge key={i} className="gap-1 p-1 px-2">
+                            { otro.src &&
+                              <Image 
+                              src={otro.src}
+                              alt={otro.alt}
+                              width={20}
+                              height={20}
+                              />
+                            }
+                            {otro.nombre}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
+                    ))}
                 </div>
                 </CardContent>
          </Card>

@@ -10,7 +10,6 @@ export function Contacto(){
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm(
         'service_30z976u', 
         'template_f5ly6h9', 

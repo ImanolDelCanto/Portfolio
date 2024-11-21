@@ -33,11 +33,13 @@ export function Proyectos() {
                         <CardTitle>{project.title}</CardTitle>
                         <CardDescription>{project.description}</CardDescription>
                     </CardHeader>
-                    <CardContent className="flex flex-col flex-grow justify-between">
+                    <CardContent className="flex flex-col flex-grow justify-between ">
                         <Image
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-72 object-cover object-top rounded-md mb-4"/>
+                          width={1000} 
+                          height={1000}
+                          className="h-72 w-full object-cover object-top rounded-md mb-4"/>
                         <div className="flex flex-wrap gap-2 mb-4 items-center">
                           {project.tags.map((tag, tagIndex) => (
                             <Badge key={tagIndex} variant="secondary">{tag}</Badge>
