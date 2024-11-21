@@ -42,11 +42,11 @@ export function Habilidades() {
       categoria: "Tecnologías de desarrollo de Software",
       tecnologias: [
         {
-          src:"/c.svg",
+          src:"/c-icon.svg",
           alt:"C icon",
           nombre:"C"
         },{
-          src:"/kotlin.svg" ,
+          src:"/ktl.svg" ,
           alt:"Kotlin icon",
           nombre:"Kotlin"
         }
@@ -57,7 +57,7 @@ export function Habilidades() {
       categoria: "Otras Habilidades",
       otros: [
         {
-          src:"/git.svg",
+          src:"/git-icon.svg",
           alt: "git icon",
           nombre: "git"
         },{
