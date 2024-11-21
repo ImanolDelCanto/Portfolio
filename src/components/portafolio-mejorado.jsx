@@ -16,7 +16,7 @@ export function PortafolioMejoradoComponent() {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 },
-    transition: { duration: 0.5 }
+    transition: { duration: 5 }
   }
   
   return (
@@ -38,7 +38,6 @@ export function PortafolioMejoradoComponent() {
               key={activeTab}
               initial="initial"
               animate="animate"
-              exit="exit"
               variants={fadeIn}>
              <TabsContent value="sobremi" >
               <SobreMiComponent id="sobremi"/>
