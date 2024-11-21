@@ -39,7 +39,7 @@ export function Proyectos() {
                             <Badge key={tagIndex} variant="secondary">{tag}</Badge>
                           ))}
                         </div>
-                        <Button className="w-full"><a href={project.url} target="_blank">Ver Proyecto</a></Button>
+                        <a href={project.url} target="_blank"><Button className="w-full">Ver Proyecto</Button></a>
                     </CardContent>
                 </Card>
             ))}

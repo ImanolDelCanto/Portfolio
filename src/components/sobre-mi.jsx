@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, BookOpen, Briefcase, Lightbulb, Target, Coffee } from "lucide-react"
+import { Code, BookOpen, Briefcase, Lightbulb, Target, Coffee, Car, BicepsFlexed, LucideGamepad2 } from "lucide-react"
 
 export function SobreMiComponent() {
   return (
@@ -17,10 +17,13 @@ export function SobreMiComponent() {
           <div>
             <h3 className="text-xl font-semibold mb-2">Mi Historia</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Soy un apasionado desarrollador web y estudiante de Licenciatura en Sistemas. Mi viaje en el mundo de la programación comenzó con la curiosidad por entender cómo funcionan las aplicaciones que usamos diariamente. Desde entonces, he estado inmerso en el aprendizaje continuo de nuevas tecnologías y mejores prácticas de desarrollo.
+              Comencé a estudiar Sistemas porque es un mundo donde todo lo que imagino y pienso puede transformarse en algo real. Me gusta creer que en el ámbito de la tecnología no existen límites para lo que se puede lograr. Me apasiona la idea de brindar soluciones a problemas de la vida cotidiana a través de sistemas, ya que creo que, casi siempre, estos pueden ser resueltos mediante la tecnología. 
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Mi fascinación por la tecnología me ha llevado a explorar diversos campos, desde el desarrollo web hasta la inteligencia artificial. Creo firmemente en el poder de la tecnología para resolver problemas y mejorar vidas, y es esta creencia la que impulsa mi pasión por crear soluciones innovadoras.
+              Actualmente me encuentro estudiando la Licenciatura de Sistemas lo cual me ha dado muchas herramientas para poder hacer lo que mas me gusta, desarrollar sistemas. Al mismo tiempo aprendo de manera autonoma diferentes tegnologias actuales para poder seguir creciendo profesionalmente y solucionar de la manera mas eficiente los distintos desafios que me propongo.
+            </p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Creo que la clave para el éxito en este mundo de los sistemas es combinar creatividad, aprendizaje continuo y pasión por resolver problemas.
             </p>
           </div>
           <div>
@@ -51,7 +54,7 @@ export function SobreMiComponent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card>
               <CardContent className="pt-6">
-                <Code className="w-12 h-12 mb-4 text-primary" />
+                <Code className="w-12 h-12 mb-4" />
                 <h4 className="font-semibold mb-2">Aprendizaje Continuo</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   Siempre buscando nuevas tecnologías y mejores prácticas para mejorar mis habilidades.
@@ -60,19 +63,19 @@ export function SobreMiComponent() {
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <Briefcase className="w-12 h-12 mb-4 text-primary" />
+                <Briefcase className="w-12 h-12 mb-4" />
                 <h4 className="font-semibold mb-2">Experiencia Práctica</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  He trabajado en proyectos reales, aplicando mis conocimientos en situaciones del mundo real.
+                  He trabajado en proyectos personales y reales, aplicando mis conocimientos en situaciones del mundo real.
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
-                <Lightbulb className="w-12 h-12 mb-4 text-primary" />
+                <Lightbulb className="w-12 h-12 mb-4" />
                 <h4 className="font-semibold mb-2">Innovación</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Me encanta pensar fuera de la caja y encontrar soluciones creativas a problemas complejos.
+                Me encanta pensar más allá de lo tradicional y brindar soluciones eficaces, innovadoras y prácticas.
                 </p>
               </CardContent>
             </Card>
@@ -87,16 +90,20 @@ export function SobreMiComponent() {
           <h3 className="text-xl font-semibold mb-4">Objetivos Profesionales</h3>
           <ul className="space-y-2">
             <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2 text-primary" />
-              <span>Convertirme en un desarrollador full-stack senior en los próximos 3 años</span>
+              <Target className="w-5 h-5 mr-2 " />
+              <span>Convertirme en un Desarrollador de Software senior</span>
             </li>
             <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2 text-primary" />
-              <span>Contribuir a proyectos de código abierto que tengan un impacto positivo en la comunidad</span>
+              <Target className="w-5 h-5 mr-2" />
+              <span>Poder contribuir en grandes proyectos</span>
             </li>
             <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2 text-primary" />
-              <span>Especializarme en arquitecturas de microservicios y desarrollo de aplicaciones escalables</span>
+              <Target className="w-5 h-5 mr-2" />
+              <span>Especializarme en Java Spring Boot</span>
+            </li>
+            <li className="flex items-center">
+              <Target className="w-5 h-5 mr-2" />
+              <span>Poder liderar mi propio equipo de Desarrollo</span>
             </li>
           </ul>
         </motion.div>
@@ -113,19 +120,23 @@ export function SobreMiComponent() {
           <div className="flex flex-wrap gap-2">
             <Badge variant="secondary" className="text-sm py-1 px-2">
               <BookOpen className="w-4 h-4 mr-1" />
-              Leer ciencia ficción
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-1 px-2">
-              <Coffee className="w-4 h-4 mr-1" />
-              Explorar cafeterías locales
+              Leer 
             </Badge>
             <Badge variant="secondary" className="text-sm py-1 px-2">
               <Briefcase className="w-4 h-4 mr-1" />
-              Fotografía urbana
+              Viajar
             </Badge>
             <Badge variant="secondary" className="text-sm py-1 px-2">
-              <Lightbulb className="w-4 h-4 mr-1" />
-              Participar en hackathons
+              <Car className="w-4 h-4 mr-1" />
+              Aprender de mecanica
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-1 px-2">
+              <BicepsFlexed  className="w-4 h-4 mr-1" />
+              Hacer ejercicio
+            </Badge>
+            <Badge variant="secondary" className="text-sm py-1 px-2">
+              <LucideGamepad2  className="w-4 h-4 mr-1" />
+              Jugar VideoJuegos
             </Badge>
           </div>
         </motion.div>
