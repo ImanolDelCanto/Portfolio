@@ -45,8 +45,8 @@ export function Header(){
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}>
             <div className="flex ms:justify-between">
-                <div>
-                    <Image src="/media/Foto-cv.jpg" alt="Foto perfil" width={224} height={176} className="w-52 h-52 rounded-full  object-cover object-top" />
+                <div className="">
+                    <Image src="/media/Foto-cv.jpg" alt="Foto perfil" width={1000} height={1000} className="w-52 object-cover object-top aspect-square rounded-full" />
                 </div>
                 <div className="md:ml-72 content-center ">
                     <h2 className="text-4xl font-bold mb-4">Desarrollador Junior</h2>
@@ -54,7 +54,7 @@ export function Header(){
                         Estudiante de Licenciatura en Sistemas | Desarrollador web 
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
-                    [ 1 a 2 años de experiencia ]
+                    [ 2 años de experiencia ]
                     </p>
                 </div>
             </div>
