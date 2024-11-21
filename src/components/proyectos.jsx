@@ -3,6 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image";
+import Link from "next/link";
+
+
 
 
 export function Proyectos() {
@@ -30,7 +34,7 @@ export function Proyectos() {
                         <CardDescription>{project.description}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex flex-col flex-grow justify-between">
-                        <img
+                        <Image
                           src={project.image}
                           alt={project.title}
                           className="w-full h-72 object-cover object-top rounded-md mb-4"/>
@@ -39,7 +43,7 @@ export function Proyectos() {
                             <Badge key={tagIndex} variant="secondary">{tag}</Badge>
                           ))}
                         </div>
-                        <a href={project.url} target="_blank"><Button className="w-full">Ver Proyecto</Button></a>
+                        <Link href={project.url} target="_blank"><Button className="w-full">Ver Proyecto</Button></Link>
                     </CardContent>
                 </Card>
             ))}

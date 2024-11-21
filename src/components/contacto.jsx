@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Github, Linkedin, Mail} from "lucide-react"
 import emailjs from '@emailjs/browser';
+import Link from 'next/link';
+
 export function Contacto(){
   const form = useRef();
   const sendEmail = (e) => {
@@ -69,19 +71,19 @@ export function Contacto(){
                       <h3 className="text-xl font-semibold mb-4">Conéctate conmigo</h3>
                       <div className="flex space-x-4">
                         <Button variant="outline" size="icon">
-                          <a href="https://github.com/Imaagus" target="_blank" >
+                          <Link href="https://github.com/Imaagus" target="_blank" >
                             <Github className="h-4 w-4" />
-                          </a>
+                          </Link>
                         </Button>
                         <Button variant="outline" size="icon">
-                          <a href="https://www.linkedin.com/in/imanol-del-canto-10135024a/" target="_blank">
+                          <Link href="https://www.linkedin.com/in/imanol-del-canto-10135024a/" target="_blank">
                             <Linkedin className="h-4 w-4" />
-                          </a>
+                          </Link>
                         </Button>
                         <Button variant="outline" size="icon">
-                          <a href="mailto:imaaugus04@gmail.com">
+                          <Link href="mailto:imaaugus04@gmail.com">
                             <Mail className="h-4 w-4" />
-                          </a>
+                          </Link>
                         </Button>
                       </div>
                     </div>

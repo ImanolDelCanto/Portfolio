@@ -1,6 +1,6 @@
 'use client'
 import { Github, Linkedin, Mail} from "lucide-react"
- 
+import Link from "next/link";
 
 export function Footer({ setActiveTab }){
     return(
@@ -13,24 +13,24 @@ export function Footer({ setActiveTab }){
             <div>
                 <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
                 <ul className="space-y-2">
-                    <li><a href="#sobremi" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" onClick={()=> setActiveTab('sobremi')}>Inicio</a></li>
-                    <li><a href="#proyectos" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" onClick={()=> setActiveTab('proyectos')} >Proyectos</a></li>
-                    <li><a href="#contacto" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" onClick={() => setActiveTab('contacto')}>
-                    Contacto</a></li>
+                    <li><Link href="#sobremi" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" onClick={()=> setActiveTab('sobremi')}>Inicio</Link></li>
+                    <li><Link href="#proyectos" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" onClick={()=> setActiveTab('proyectos')} >Proyectos</Link></li>
+                    <li><Link href="#contacto" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" onClick={() => setActiveTab('contacto')}>
+                    Contacto</Link></li>
                 </ul>
             </div>
             <div>
                 <h3 className="text-lg font-semibold mb-4">Conecta</h3>
                 <div className="flex space-x-4">
-                <a href="https://github.com/Imaagus" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
+                <Link href="https://github.com/Imaagus" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
                   <Github className="h-6 w-6" />
-                </a>
-                <a href="https://www.linkedin.com/in/imanol-del-canto-10135024a/" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
+                </Link>
+                <Link href="https://www.linkedin.com/in/imanol-del-canto-10135024a/" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
                   <Linkedin className="h-6 w-6" />
-                </a>
-                <a href="mailto:imaaugus04@gmail.com"  className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
+                </Link>
+                <Link href="mailto:imaaugus04@gmail.com"  className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
                   <Mail className="h-6 w-6" />
-                </a>
+                </Link>
                 </div>
             </div>
         </div>
