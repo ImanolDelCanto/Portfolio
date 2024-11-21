@@ -51,7 +51,7 @@ export function Habilidades() {
           nombre:"Kotlin"
         }
       ]
-    }];
+    }]; 
   const otrasHabilidades =[
     {
       categoria: "Otras Habilidades",
