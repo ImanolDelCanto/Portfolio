@@ -18,7 +18,7 @@ export function PortafolioMejoradoComponent() {
     exit: { opacity: 0, y: -20 },
     transition: { duration: 0.5 }
   }
-
+  
   return (
     (<div
       className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-zinc-900 dark:to-gray-800 transition-colors duration-300">
