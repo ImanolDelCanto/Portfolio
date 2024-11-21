@@ -15,7 +15,7 @@ export function Habilidades() {
         alt:"react icon",
         nombre: "React"
       },{
-        src:"/next.js.svg",
+        src:"/next-js.svg",
         alt: "next icon",
         nombre: "Next.js"
       },{
@@ -33,7 +33,7 @@ export function Habilidades() {
     categoria: "Tecnologías Backend",
     tecnologias: [
       {
-        src:"/MySQL.svg",
+        src:"/my-sql.svg",
         alt:"MySQL icon",
         nombre:"MySQL"
       }
