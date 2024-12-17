@@ -39,7 +39,7 @@ export function Proyectos() {
                 description: "Sistema el cual tiene como objetivo poder llevar el registro de reservas de unas cabañas guardando los datos de estas reservas en la base de datos, lo que se quiere lograr con este sistema es simplificar la tarea de gestionar las cabañas con una ui sencilla pero util. Aun esta en desarrollo(faltan funcionalidades). Se uso Herramienta v0",
                 image: "/media/cabinManag.png",
                 tags: ["React","Next.js","TypeScript","Tailwind CSS"],
-                url: "https://stockmanagement-hazel.vercel.app/"
+                url: "https://cabin-management.vercel.app/"
                 },
                 {
                 title: "Juego de preguntas y respuestas",
