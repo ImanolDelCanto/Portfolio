@@ -11,11 +11,18 @@ export function Proyectos() {
   const proyectos = [
     {
         "title": "Landing Page",
-        "description": "Sitio web que muestra qué son los vuelos bautismo y permite reservar para realizarlos.",
-        "images": ["/media/FlightPage.png"],
-        "tags": ["React", "Next.js", "Tailwind CSS"],
-        "url": "https://vuelosdebautismos.vercel.app/"
+        "description": "Sitio web que muestra informacion sobre el negocio Alumbar y tiene una parte de catalogo de sus productos con sus precios ",
+        "images": ["/media/alumbar.png"],
+        "tags": ["React", "Next.js", "Tailwind CSS","TypeScript"],
+        "url": "https://alumbaronline.com/"
     },
+    {
+      "title": "Landing Page",
+      "description": "Sitio web que muestra qué son los vuelos bautismo y permite reservar para realizarlos.",
+      "images": ["/media/FlightPage.png"],
+      "tags": ["React", "Next.js", "Tailwind CSS"],
+      "url": "https://vuelosdebautismos.vercel.app/"
+  },
     {
         "title": "Sistema para emprendimiento",
         "description": "Sitio web en donde el usuario puede llevar el control de sus productos y ventas. Se conecta a una base de datos para mantener un registro en tiempo real. Fue creado para ser autoadministrable y no requerir conocimientos técnicos. (Realizado en base a mi prototipo).",

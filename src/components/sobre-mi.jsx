@@ -25,6 +25,9 @@ export function SobreMiComponent() {
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Creo que la clave para el éxito en este mundo de los sistemas es combinar creatividad, aprendizaje continuo y pasión por resolver problemas.
             </p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Hoy en dia estoy me encuentro creando GretSoft, pero estoy abierto a propuestas. 
+            </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">Educación</h3>
