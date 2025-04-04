@@ -1,149 +1,264 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Code, BookOpen, Briefcase, Lightbulb, Target, Coffee, Car, BicepsFlexed, LucideGamepad2 } from "lucide-react"
+import { motion } from "framer-motion"
+import {
+  Code,
+  BookOpen,
+  Briefcase,
+  Lightbulb,
+  Target,
+  Car,
+  DumbbellIcon as BicepsFlexed,
+  LucideGamepad2,
+} from "lucide-react"
+import { DotPattern } from '@/components/ui/dot-pattern'
+import { SectionHeading } from "./ui/section-heading"
 
 export function SobreMiComponent() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  }
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  }
+
   return (
-    (<Card>
-      <CardHeader>
-        <CardTitle>Sobre Mí</CardTitle>
-        <CardDescription>Conóceme más allá del código</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Mi Historia</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Comencé a estudiar Sistemas porque es un mundo donde todo lo que imagino y pienso puede transformarse en algo real. Me gusta creer que en el ámbito de la tecnología no existen límites para lo que se puede lograr. Me apasiona la idea de brindar soluciones a problemas de la vida cotidiana a través de sistemas, ya que creo que, casi siempre, estos pueden ser resueltos mediante la tecnología. 
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Actualmente me encuentro estudiando la Licenciatura de Sistemas lo cual me ha dado muchas herramientas para poder hacer lo que mas me gusta, desarrollar sistemas. Al mismo tiempo aprendo de manera autonoma diferentes tegnologias actuales para poder seguir creciendo profesionalmente y solucionar de la manera mas eficiente los distintos desafios que me propongo.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Creo que la clave para el éxito en este mundo de los sistemas es combinar creatividad, aprendizaje continuo y pasión por resolver problemas.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Hoy en dia estoy me encuentro creando GretSoft, pero estoy abierto a propuestas. 
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Educación</h3>
-            <div className="mb-4">
-              <h4 className="font-semibold">Licenciatura en Sistemas</h4>
-              <p className="text-gray-600 dark:text-gray-300">Universidad Nacional de Lanus, 2023 - Presente</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Promedio actual: 8.0/10</p>
+    <div className="relative">
+      <DotPattern className="top-10 right-10" animate />
+
+      <SectionHeading title="about-me" />
+
+      <motion.div
+        className="grid md:grid-cols-2 gap-8"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <motion.div variants={item}>
+          <motion.div
+            className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md mb-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+            whileHover={{ y: -5 }}
+          >
+            <h4 className="font-semibold mb-4 group-hover:text-purple-400 transition-colors">Mi Historia</h4>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                Comencé a estudiar Sistemas porque es un mundo donde todo lo que imagino y pienso puede transformarse en
+                algo real. Me gusta creer que en el ámbito de la tecnología no existen límites para lo que se puede
+                lograr. Me apasiona la idea de brindar soluciones a problemas de la vida cotidiana a través de sistemas,
+                ya que creo que, casi siempre, estos pueden ser resueltos mediante la tecnología.
+              </p>
+              <p>
+                Actualmente me encuentro estudiando la Licenciatura de Sistemas lo cual me ha dado muchas herramientas
+                para poder hacer lo que mas me gusta, desarrollar sistemas. Al mismo tiempo aprendo de manera autonoma
+                diferentes tegnologias actuales para poder seguir creciendo profesionalmente y solucionar de la manera
+                mas eficiente los distintos desafios que me propongo.
+              </p>
+              <p>
+                Creo que la clave para el éxito en este mundo de los sistemas es combinar creatividad, aprendizaje
+                continuo y pasión por resolver problemas.
+              </p>
+              <p>Hoy en dia estoy me encuentro creando GretSoft, pero estoy abierto a propuestas.</p>
             </div>
-            <div className="mb-4">
-              <h4 className="font-semibold">Ingles (B2)</h4>
-              <p className="text-gray-600 dark:text-gray-300">Instituto Lenguas Vivas, 2015 - 2022 </p>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Certificaciones</h3>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300">
-              <li>Desarrollo Web - CoderHouse</li>
-              <li>JavaScript - CoderHouse</li>
+          </motion.div>
+
+          <motion.div
+            className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+            whileHover={{ y: -5 }}
+            variants={item}
+          >
+            <h4 className="font-semibold mb-4 group-hover:text-purple-400 transition-colors">
+              Objetivos Profesionales
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 group/item">
+                <div className="p-2 rounded-full bg-zinc-700/50 group-hover/item:bg-purple-500/20 transition-colors">
+                  <Target className="w-4 h-4 text-gray-400 group-hover/item:text-purple-400 transition-colors" />
+                </div>
+                <span>Convertirme en un Desarrollador de Software senior</span>
+              </li>
+              <li className="flex items-center gap-3 group/item">
+                <div className="p-2 rounded-full bg-zinc-700/50 group-hover/item:bg-purple-500/20 transition-colors">
+                  <Target className="w-4 h-4 text-gray-400 group-hover/item:text-purple-400 transition-colors" />
+                </div>
+                <span>Poder contribuir en grandes proyectos</span>
+              </li>
+              <li className="flex items-center gap-3 group/item">
+                <div className="p-2 rounded-full bg-zinc-700/50 group-hover/item:bg-purple-500/20 transition-colors">
+                  <Target className="w-4 h-4 text-gray-400 group-hover/item:text-purple-400 transition-colors" />
+                </div>
+                <span>Especializarme en Java Spring Boot</span>
+              </li>
+              <li className="flex items-center gap-3 group/item">
+                <div className="p-2 rounded-full bg-zinc-700/50 group-hover/item:bg-purple-500/20 transition-colors">
+                  <Target className="w-4 h-4 text-gray-400 group-hover/item:text-purple-400 transition-colors" />
+                </div>
+                <span>Poder liderar mi propio equipo de Desarrollo</span>
+              </li>
             </ul>
-          </div>
-        </div>
-        
-        <motion.div
-          className="mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}>
-          <h3 className="text-xl font-semibold mb-4">Lo que me define</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Card>
-              <CardContent className="pt-6">
-                <Code className="w-12 h-12 mb-4" />
-                <h4 className="font-semibold mb-2">Aprendizaje Continuo</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Siempre buscando nuevas tecnologías y mejores prácticas para mejorar mis habilidades.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <Briefcase className="w-12 h-12 mb-4" />
-                <h4 className="font-semibold mb-2">Experiencia Práctica</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  He trabajado en proyectos personales y reales, aplicando mis conocimientos en situaciones del mundo real.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <Lightbulb className="w-12 h-12 mb-4" />
-                <h4 className="font-semibold mb-2">Innovación</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                Me encanta pensar más allá de lo tradicional y brindar soluciones eficaces, innovadoras y prácticas.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          </motion.div>
         </motion.div>
-        
-        <motion.div
-          className="mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}>
-          <h3 className="text-xl font-semibold mb-4">Objetivos Profesionales</h3>
-          <ul className="space-y-2">
-            <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2 " />
-              <span>Convertirme en un Desarrollador de Software senior</span>
-            </li>
-            <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2" />
-              <span>Poder contribuir en grandes proyectos</span>
-            </li>
-            <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2" />
-              <span>Especializarme en Java Spring Boot</span>
-            </li>
-            <li className="flex items-center">
-              <Target className="w-5 h-5 mr-2" />
-              <span>Poder liderar mi propio equipo de Desarrollo</span>
-            </li>
-          </ul>
+
+        <motion.div variants={item}>
+          <motion.div
+            className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md mb-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+            whileHover={{ y: -5 }}
+          >
+            <h4 className="font-semibold mb-4 group-hover:text-purple-400 transition-colors">Educación</h4>
+            <div className="mb-4 p-4 bg-zinc-700/30 rounded-md hover:bg-zinc-700/40 transition-colors">
+              <h5 className="font-medium text-purple-300">Licenciatura en Sistemas</h5>
+              <p className="text-gray-400">Universidad Nacional de Lanus, 2023 - Presente</p>
+              <p className="text-sm text-gray-500 font-mono">Promedio actual: 8.0/10</p>
+            </div>
+            <div className="p-4 bg-zinc-700/30 rounded-md hover:bg-zinc-700/40 transition-colors">
+              <h5 className="font-medium text-purple-300">Ingles (B2)</h5>
+              <p className="text-gray-400">Instituto Lenguas Vivas, 2015 - 2022</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md mb-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+            whileHover={{ y: -5 }}
+            variants={item}
+          >
+            <h4 className="font-semibold mb-4 group-hover:text-purple-400 transition-colors">Certificaciones</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-center gap-3 p-3 bg-zinc-700/30 rounded-md hover:bg-zinc-700/40 transition-colors">
+                <Code className="h-5 w-5 text-purple-400" />
+                Desarrollo Web - CoderHouse
+              </li>
+              <li className="flex items-center gap-3 p-3 bg-zinc-700/30 rounded-md hover:bg-zinc-700/40 transition-colors">
+                <Code className="h-5 w-5 text-purple-400" />
+                JavaScript - CoderHouse
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+            whileHover={{ y: -5 }}
+            variants={item}
+          >
+            <h4 className="font-semibold mb-4 group-hover:text-purple-400 transition-colors">
+              Fuera del Mundo del Código
+            </h4>
+            <p className="text-gray-300 mb-4">Cuando no estoy frente a la pantalla, disfruto de:</p>
+            <div className="flex flex-wrap gap-3">
+              <motion.div
+                className="bg-zinc-700/50 text-sm py-2 px-4 rounded-full flex items-center gap-2 hover:bg-purple-500/20 hover:border-purple-500/30 border border-transparent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BookOpen className="w-4 h-4 text-purple-400" />
+                Leer
+              </motion.div>
+              <motion.div
+                className="bg-zinc-700/50 text-sm py-2 px-4 rounded-full flex items-center gap-2 hover:bg-purple-500/20 hover:border-purple-500/30 border border-transparent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Briefcase className="w-4 h-4 text-purple-400" />
+                Viajar
+              </motion.div>
+              <motion.div
+                className="bg-zinc-700/50 text-sm py-2 px-4 rounded-full flex items-center gap-2 hover:bg-purple-500/20 hover:border-purple-500/30 border border-transparent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Car className="w-4 h-4 text-purple-400" />
+                Aprender de mecanica
+              </motion.div>
+              <motion.div
+                className="bg-zinc-700/50 text-sm py-2 px-4 rounded-full flex items-center gap-2 hover:bg-purple-500/20 hover:border-purple-500/30 border border-transparent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BicepsFlexed className="w-4 h-4 text-purple-400" />
+                Hacer ejercicio
+              </motion.div>
+              <motion.div
+                className="bg-zinc-700/50 text-sm py-2 px-4 rounded-full flex items-center gap-2 hover:bg-purple-500/20 hover:border-purple-500/30 border border-transparent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <LucideGamepad2 className="w-4 h-4 text-purple-400" />
+                Jugar VideoJuegos
+              </motion.div>
+            </div>
+          </motion.div>
         </motion.div>
-        
+      </motion.div>
+
+      <motion.div
+        className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          duration: 0.5,
+          staggerChildren: 0.1,
+          delayChildren: 0.2,
+        }}
+      >
         <motion.div
-          className="mt-8"
+          className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+          whileHover={{ y: -5, scale: 1.02 }}
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}>
-          <h3 className="text-xl font-semibold mb-4">Fuera del Mundo del Código</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Cuando no estoy frente a la pantalla, disfruto de:
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="p-3 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full w-fit mb-4 group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+            <Code className="w-8 h-8 text-purple-400" />
+          </div>
+          <h4 className="font-semibold mb-2 group-hover:text-purple-400 transition-colors">Aprendizaje Continuo</h4>
+          <p className="text-sm text-gray-400">
+            Siempre buscando nuevas tecnologías y mejores prácticas para mejorar mis habilidades.
           </p>
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="secondary" className="text-sm py-1 px-2">
-              <BookOpen className="w-4 h-4 mr-1" />
-              Leer 
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-1 px-2">
-              <Briefcase className="w-4 h-4 mr-1" />
-              Viajar
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-1 px-2">
-              <Car className="w-4 h-4 mr-1" />
-              Aprender de mecanica
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-1 px-2">
-              <BicepsFlexed  className="w-4 h-4 mr-1" />
-              Hacer ejercicio
-            </Badge>
-            <Badge variant="secondary" className="text-sm py-1 px-2">
-              <LucideGamepad2  className="w-4 h-4 mr-1" />
-              Jugar VideoJuegos
-            </Badge>
-          </div>
         </motion.div>
-      </CardContent>
-    </Card>)
-  );
+        <motion.div
+          className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+          whileHover={{ y: -5, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <div className="p-3 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full w-fit mb-4 group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+            <Briefcase className="w-8 h-8 text-purple-400" />
+          </div>
+          <h4 className="font-semibold mb-2 group-hover:text-purple-400 transition-colors">Experiencia Práctica</h4>
+          <p className="text-sm text-gray-400">
+            He trabajado en proyectos personales y reales, aplicando mis conocimientos en situaciones del mundo real.
+          </p>
+        </motion.div>
+        <motion.div
+          className="bg-zinc-800/50 border border-zinc-700/50 p-6 rounded-md backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 group"
+          whileHover={{ y: -5, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <div className="p-3 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full w-fit mb-4 group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+            <Lightbulb className="w-8 h-8 text-purple-400" />
+          </div>
+          <h4 className="font-semibold mb-2 group-hover:text-purple-400 transition-colors">Innovación</h4>
+          <p className="text-sm text-gray-400">
+            Me encanta pensar más allá de lo tradicional y brindar soluciones eficaces, innovadoras y prácticas.
+          </p>
+        </motion.div>
+      </motion.div>
+    </div>
+  )
 }
+

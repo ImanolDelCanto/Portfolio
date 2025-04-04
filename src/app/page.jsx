@@ -1,8 +1,6 @@
-import { PortafolioMejoradoComponent } from "@/components/portafolio-mejorado";
-import Image from "next/image";
+import { PortafolioMejoradoComponent } from "@/components/portafolio-mejorado"
 
 export default function Home() {
-  return (
-    <PortafolioMejoradoComponent />
-  );
+  return <PortafolioMejoradoComponent />
 }
+
