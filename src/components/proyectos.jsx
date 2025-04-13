@@ -12,9 +12,18 @@ import { ExternalLink, Github } from "lucide-react"
 export function Proyectos() {
   const proyectos = [
     {
-      title: "Landing Page",
+      title: "Sitio web GretSoft",
       description:
-        "Sitio web que muestra informacion sobre el negocio Alumbar y tiene una parte de catalogo de sus productos con sus precios ",
+        "Sitio de Gretsot, es un proyecto en el cual me encuantro trabajando donde ofrezco servicios webs. La pagina permite ver los servicios que ofrezco, ver ejemplos de trabajos realizados y contactarme.",
+      images: ["/media/Gretsoft.png"],
+      tags: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      url: "https:/gretsoft.com.ar/",
+      isGithub: false,
+    },
+    {
+      title: "Sitio web",
+      description:
+        "Sitio web que muestra informacion sobre el negocio Alumbar y tiene un catalogo de sus productos con sus precios conectado a un drive de Google Sheets para poder actualizarlo facilmente.",
       images: ["/media/alumbar.png"],
       tags: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
       url: "https://alumbaronline.com/",
@@ -31,7 +40,7 @@ export function Proyectos() {
     {
       title: "Sistema para emprendimiento",
       description:
-        "Sitio web en donde el usuario puede llevar el control de sus productos y ventas. Se conecta a una base de datos para mantener un registro en tiempo real. Fue creado para ser autoadministrable y no requerir conocimientos técnicos. (Realizado en base a mi prototipo).",
+        "App web en donde el usuario puede llevar el control de sus productos y ventas. Se conecta a una base de datos para mantener un registro en tiempo real. Fue creado para ser autoadministrable y no requerir conocimientos técnicos. (Realizado en base a mi prototipo).",
       images: [
         "/media/sistem1 (1).png",
         "/media/sistem1 (2).png",
