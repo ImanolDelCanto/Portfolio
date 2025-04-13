@@ -15,7 +15,7 @@ export function Proyectos() {
       title: "Sitio web GretSoft",
       description:
         "Sitio de Gretsot, es un proyecto en el cual me encuantro trabajando donde ofrezco servicios webs. La pagina permite ver los servicios que ofrezco, ver ejemplos de trabajos realizados y contactarme.",
-      images: ["/media/Gretsoft.png"],
+      images: ["/media/GretSoft.png"],
       tags: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
       url: "https:/gretsoft.com.ar/",
       isGithub: false,
