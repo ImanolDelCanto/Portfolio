@@ -67,7 +67,6 @@ export function SobreMiComponent() {
                 Creo que la clave para el éxito en este mundo de los sistemas es combinar creatividad, aprendizaje
                 continuo y pasión por resolver problemas.
               </p>
-              <p>Hoy en dia estoy me encuentro creando GretSoft, pero estoy abierto a propuestas.</p>
             </div>
           </motion.div>
 
