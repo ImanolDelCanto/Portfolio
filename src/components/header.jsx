@@ -75,7 +75,6 @@ export function Header() {
             Desarrollador Junior
           </h2>
           <p className="text-lg text-gray-400 mb-1">Estudiante de Licenciatura en Sistemas | Desarrollador </p>
-       
         </motion.div>
       </motion.div>
     </div>
