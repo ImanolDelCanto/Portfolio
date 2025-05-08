@@ -74,11 +74,8 @@ export function Header() {
           <h2 className="text-3xl font-mono font-bold mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
             Desarrollador Junior
           </h2>
-          <p className="text-lg text-gray-400 mb-1">Estudiante de Licenciatura en Sistemas | Desarrollador web</p>
-          <p className="text-sm text-gray-500 mb-4 font-mono">[ 2 años de experiencia ]</p>
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-800/80 border border-purple-500/20 text-xs text-gray-300 font-mono backdrop-blur-sm">
-            front-end developer
-          </div>
+          <p className="text-lg text-gray-400 mb-1">Estudiante de Licenciatura en Sistemas | Desarrollador </p>
+       
         </motion.div>
       </motion.div>
     </div>
