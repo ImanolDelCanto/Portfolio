@@ -34,7 +34,7 @@ export function Proyectos() {
       description: "Sitio web que muestra qué son los vuelos bautismo y permite reservar para realizarlos.",
       images: ["/media/Experiencias Aereas.png"],
       tags: ["React", "Next.js", "Tailwind CSS"],
-      url: "https://experienciasaereas.com.ar /",
+      url: "https://experienciasaereas.com.ar/",
       isGithub: false,
     },
     {
